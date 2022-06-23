@@ -35,34 +35,18 @@ const devideAndShortManual = (number) => {
     }
     //make split array
     let newArr = []
-    let palet,palet3 = []
-    let temp,swapped
+    let result = []
     let a = 0
-    for(let i=0; i<=len; i++, a++){
-        if(arr[i]==0){
-            for(i=0;i<=a-1;i++){
-                swapped = false
-                for(let j=0;j<a-i;j++){
-                    if (newArr[j] > newArr[j+1]){
-                        temp = newArr[j];
-                        newArr[j] = newArr[j+1];
-                        newArr[j+1] =temp;
-                        swapped = true;
-                    }
-                    if (swapped == false){
-                        zero = []
-                        break;
-                    }
-                }
-            }
-        }else{
-            zero[i] = [arr[i]]
+    for(let i=0; i<=len; i++){
+        if(arr[i]!=0){
+            zero[i] = [string[i]]
             newArr[i+1]=newArr[i];
             newArr[i]= zero[i];
-            palet = newArr
             zero = []
+        }else{
+            result = newArr
         }
-    }console.log(palet);
+    }console.log(result);
 }
 
 devideAndShort(98123037221069457)

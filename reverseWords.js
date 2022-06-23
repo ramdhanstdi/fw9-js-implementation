@@ -34,29 +34,8 @@ const reverseWords = (string) =>{
 reverseWords("hello world")
 
 const revWordsBuiltIn = (string) => {
-    const len = string.length-1
-    const arr = string.split('').reverse()
-    let result = ''
-    let final = ''
-    let i=0
-    let j=0
-    do{
-        result= result + arr[i]
-        if(arr[i]===' '){
-            final = result.split('').reverse().join('')
-            j=0
-        }
-        i++
-        j++
-    }while(i<=len)
-    i=0
-    const world = result.split('').reverse()
-    final = final + ' '
-    do{
-        final = final + world[i]
-        i++
-    }while(i<j)
-    console.log(final);
+    const result = string.split(' ').reverse().join(' ')
+    console.log(result);
 }
 
 revWordsBuiltIn("hello world")

@@ -19,16 +19,18 @@ const devideAndShortManual = (number) => {
     let arr = []
     let newArr = []
     let i = 0
+    //do split by0
     do{
+        //when meet 0 do this
         if(string[i]==0||i==len+1){
             arr = arr + [zero]
+            //sorting
             for (let n = 0; n < arr.length; n++) {
-                let i = 0;
+                let i = 0
                 while (arr[i] < arr[n]) ++i;
-        
-                let newStr = "";
+                let newStr = ""
                 for (let x = 0; x < i; x++) newStr += arr[x];
-                newStr += arr[n];
+                newStr += arr[n]
                 for (let y = i; y < n; y++) newStr += arr[y];
                 for (let z = n + 1; z < arr.length; z++) newStr += arr[z];
                 arr = newStr;
@@ -38,6 +40,7 @@ const devideAndShortManual = (number) => {
             zero = []
             i++
         }else{
+            //adding value to variable
             zero = zero + [string[i]]
             i++
         }
